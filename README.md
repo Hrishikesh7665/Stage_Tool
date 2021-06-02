@@ -169,4 +169,6 @@ Then, we will perform logical AND operation between each byte of carrier audio (
 Thats All For The Code But You Can Read More About Stenography [HERE](https://core.ac.uk/download/pdf/234671204.pdf)
 
 
-##Demo
+## Demo
+
+![](Extras/Resources5.gif)
