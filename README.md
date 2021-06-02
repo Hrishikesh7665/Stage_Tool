@@ -97,3 +97,46 @@ How It Works
 ------------
 
 Hide text or text data behind in an image function in this program is based on OpenCV to hide data in images. It uses the first bit of every pixel, and every colour of an image. The code is quite simple to understand; If every first bit has been used, the module starts using the second bit, so the larger the data, the more the image is altered.
+
+
+How Hidng Image Inside An Image Works
+-------------------------------------
+
+Ok, now that we know the basics of steganography, let’s learn some simple image processing concepts.
+
+Before understanding how can we hide an image inside another, we need to understand what a digital image is.
+
+What Is A Digital Image
+-----------------------
+
+We can describe a **digital image** as a finite set of digital values, called pixels. Pixels are the smallest individual element of an image, holding values that represent the brightness of a given color at any specific point. So we can think of an image as a matrix (or a two-dimensional array) of pixels which contains a fixed number of rows and columns.
+
+You can read more about [Digital Image](https://en.wikipedia.org/wiki/Digital_image) In Wikipedia.
+
+
+Pixel concept and color models
+------------------------------
+
+As already mentioned, pixels are the smallest individual element of an image. So, each pixel is a sample of an original image. It means, more samples provide more accurate representations of the original. The intensity of each pixel is variable. In color imaging systems, a color is typically represented by three or four component intensities such as red, green, and blue, or cyan, magenta, yellow, and black.
+
+Here, we will work with the RGB color model. As you can imagine, the RGB color model has 3 channels, red, green and blue.
+
+![](Extras/Resources1.jpg)
+
+So, as you can see in the image each pixel from the image is composed of 3 values (red, green, blue) which are 8-bit values (the range is 0–255).
+
+![](Extras/Resources2.jpg)
+
+As we can see in the image above, for each pixel we have three values, which can be represented in binary code.
+
+When working with binary codes, we have more significant bits and less significant bits, as you can see in the image below.
+
+![](Extras/Resources3.jpg)
+
+The leftmost bit is the most significant bit. If we change the leftmost bit it will have a large impact on the final value. For example, if we change the leftmost bit from 1 to 0 (11111111 to 01111111) it will change the decimal value from 255 to 127.
+
+On the other hand, the rightmost bit is the least significant bit. If we change the rightmost bit it will have less impact on the final value. For example, if we change the leftmost bit from 1 to 0 (11111111 to 11111110) it will change the decimal value from 255 to 254. Note that the rightmost bit will change only 1 in a range of 256 (it represents less than 1%).
+
+**In Short:** each pixel has three values (RGB), each RGB value is 8-bit (it means we can store 8 binary values) and the rightmost bits are least significant. So, if we change the rightmost bits it will have a small visual impact on the final image. This is the steganography key to hide an image inside another. Change the least significant bits from an image and include the most significant bits from the other image.
+
+![](Extras/Resources4.jpg)
