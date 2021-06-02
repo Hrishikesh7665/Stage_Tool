@@ -153,3 +153,20 @@ To decode, three pixels are read at a time, till the last value is odd, which me
 
 Okay that's pretty much for Image Steganography, lets talk about Audio Steganography. 
 
+## What Is Audio Steganography
+
+Audio Steganography is the art of covertly embedding secret messages into digital audio.
+
+How Audio Steganography Works
+-----------------------------
+
+Same as image steganography also here we use LSB (Least Significant Bit) method to hide text behind Aduio.
+
+We will use .wav audio file format for our carrier song. Wave is one of the most popular lossless compression format. Python has a native library called “wave” that provides us basic tools to manipulate audio data.
+
+Then, we will perform logical AND operation between each byte of carrier audio (the “song”) and a bit mask that resets the LSB of carrier byte. Then we will perform a simple logical OR operation between the modified carrier byte and the next bit (0 or 1) from the secret message.
+
+Thats All For The Code But You Can Read More About Stenography [HERE](https://core.ac.uk/download/pdf/234671204.pdf)
+
+
+##Demo
