@@ -140,3 +140,16 @@ On the other hand, the rightmost bit is the least significant bit. If we change 
 **In Short:** each pixel has three values (RGB), each RGB value is 8-bit (it means we can store 8 binary values) and the rightmost bits are least significant. So, if we change the rightmost bits it will have a small visual impact on the final image. This is the steganography key to hide an image inside another. Change the least significant bits from an image and include the most significant bits from the other image.
 
 ![](Extras/Resources4.jpg)
+
+
+Encode The Data
+---------------
+Every byte of data is converted to its 8-bit binary code using ASCII values. Now pixels are read from left to right in a group of 3 containing a total of 9 values. The first 8-values are used to store the binary data. The value is made odd, if 1 occurs and even, if 0 occurs.
+
+Decode The Data
+---------------
+To decode, three pixels are read at a time, till the last value is odd, which means the message is over. Every 3-pixels contain a binary data, which can be extracted by the same encoding logic. If the value if odd the binary bit is 1 else 0.
+
+
+Okay that's pretty much for Image Steganography, lets talk about Audio Steganography. 
+
