@@ -1,4 +1,4 @@
-[![](https://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+[![](https://forthebadge.com/images/badges/made-with-python.svg)](https://www.python.org)
 [![](https://img.shields.io/badge/Supported%20OS-Windows-blue)](https://www.microsoft.com/en-in/software-download/windows10)
 
 
